@@ -10,11 +10,10 @@ import { getMealItemDetail } from "../meals/[meals]/page";
 const SavedListPage = () => {
   // state
   const [savedMealsId, setSavedMealsId] = useState([]);
-  const savedMeals = JSON.parse(localStorage.getItem("savedMeals") as string);
 
   useEffect(() => {
-    if (savedMeals) {
-      setSavedMealsId(savedMeals);
+    if (JSON.parse(localStorage.getItem("savedMeals") as string)) {
+      setSavedMealsId(JSON.parse(localStorage.getItem("savedMeals") as string));
     }
   }, []);
 
