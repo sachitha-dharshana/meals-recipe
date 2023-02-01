@@ -56,7 +56,7 @@ const MealDetail = ({ meal, handleSave }: TProps) => {
             </li>
           )}
 
-          {savedMeals.includes(meal.idMeal) && (
+          {savedMeals?.includes(meal.idMeal) && (
             <p className="text-md text-green-400 mt-8">
               You have already saved this meal 😋
             </p>
@@ -66,7 +66,7 @@ const MealDetail = ({ meal, handleSave }: TProps) => {
             onClick={handleSave}
             className="bg-meal-primary px-4 py-2 rounded-sm mt-4"
           >
-            {savedMeals.includes(meal.idMeal) ? "✖ Unsave" : "❤ Save"}
+            {savedMeals?.includes(meal.idMeal) ? "✖ Unsave" : "❤ Save"}
           </button>
         </div>
       </div>
