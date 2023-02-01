@@ -1,7 +1,5 @@
 "use client";
 
-import React, { useContext, useState } from "react";
-
 type TProps = {
   searchText: string;
   setSearchText: React.Dispatch<React.SetStateAction<string>>;
