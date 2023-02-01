@@ -28,7 +28,7 @@ const MealItemDetail = () => {
       const savedMeals = JSON.parse(
         localStorage.getItem("savedMeals") as string
       );
-      if (savedMeals.includes(id)) {
+      if (savedMeals?.includes(id)) {
         setIsSaved(true);
       } else {
         setIsSaved(false);
